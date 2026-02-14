@@ -1,0 +1,264 @@
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  background-image: url(
+    "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f"
+  );
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+
+.container {
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.1);
+  color: white;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  margin: 0;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+
+
+.search-bar {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 15px auto;
+  display: block;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+
+
+.event-grid-scroll {
+  height: 80vh;
+  overflow-y: auto;
+
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fill, minmax(250px, 1fr));
+
+  gap: 20px;
+  padding: 20px;
+}
+
+
+.event-grid-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.event-grid-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+
+
+.card {
+  padding: 15px;
+  border-radius: 15px;
+
+  backdrop-filter: blur(15px);
+  background: rgba(255,255,255,0.15);
+
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  color: white;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.card img {
+  width: 100%;          
+  height: 180px;        
+  object-fit: cover;    
+  border-radius: 10px;
+}
+
+
+
+button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+
+
+.screen {
+  background: #ccc;
+  padding: 10px;
+  margin: 20px auto;
+  width: 300px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: black;
+}
+
+
+.theatre {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+
+.row-label {
+  width: 20px;
+  font-weight: bold;
+}
+
+
+.seat {
+  padding: 8px;
+  background: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+
+.vip {
+  background: gold;
+  color: black;
+  font-weight: bold;
+}
+
+
+.selected {
+  background: green !important;
+  color: white;
+}
+
+
+.booked {
+  background: red !important;
+  color: white;
+  cursor: not-allowed;
+}
+
+
+.legend {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+
+.pricing {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.summary {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+
+.summary button {
+  width: 100%;
+  background: green;
+}
+
+.summary button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+  margin: auto;
+}
+
+.payment-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.payment-form button {
+  padding: 12px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
